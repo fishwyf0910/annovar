@@ -6,7 +6,7 @@ step 1：
 #用自己的参考基因组构建数据库
 /data01/wangyf/software/gffread/gffread genome.gff -T -o genome.gtf
 /data01/wangyf/software/gtfToGenePred -genePredExt genome.gtf genome_refGene.txt
-retrieve_seq_from_fasta.pl --format refGene --seqfile genome.fa genome_refGene.txt --out genome_refGeneMrna.fa
+/data01/wangyf/software/annovar/retrieve_seq_from_fasta.pl --format refGene --seqfile genome.fa genome_refGene.txt --out genome_refGeneMrna.fa
 
 mkdir genome
 cp genome* genome
