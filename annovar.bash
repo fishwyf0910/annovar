@@ -12,9 +12,9 @@ mkdir genome
 cp genome* genome
 
 #格式转换
-convert2annovar.pl -format vcf4 -allsample -withfreq /data01/wangyf/project2/CyprinusCarpio/15.pop/0.vcfdata/final-raw.indel5.biSNP.QUAL30.QD3.FS20.MQ55.SOR3.MQRS-5.RPRS-5.PASS.GQ10.popmiss.maxmiss0.15.AF0.05.10-3ClusterFilter.vcf.gz > final.vcf.avinput
+/data01/wangyf/software/annovar/convert2annovar.pl -format vcf4 -allsample -withfreq /data01/wangyf/project2/CyprinusCarpio/15.pop/0.vcfdata/final-raw.indel5.biSNP.QUAL30.QD3.FS20.MQ55.SOR3.MQRS-5.RPRS-5.PASS.GQ10.popmiss.maxmiss0.15.AF0.05.10-3ClusterFilter.vcf.gz > final.vcf.avinput
 
-annotate_variation.pl -geneanno -dbtype refGene -outfile anno -buildver genome final.vcf.avinput ./genome
+/data01/wangyf/software/annovar/annotate_variation.pl -geneanno -dbtype refGene -outfile anno -buildver genome final.vcf.avinput ./genome
 #-geneanno 通过基于基因的注释注释变体(推断基因的功能后果)
 #-dbtype 指定数据库类型
 #-outfile 指定输出文件前缀
