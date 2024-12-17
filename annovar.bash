@@ -1,7 +1,5 @@
 ##Annovar对Variants进行功能注释
 
-cd /data01/wangyf/project2/CyprinusCarpio/15.pop/7.annovar/
-
 step 1：
 #用自己的参考基因组构建数据库
 /data01/wangyf/software/gffread/gffread genome.gff -T -o genome.gtf
