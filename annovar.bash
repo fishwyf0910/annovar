@@ -13,7 +13,7 @@ cp genome* genome
 /data01/wangyf/software/annovar/convert2annovar.pl -format vcf4 -allsample \
   -withfreq /data01/wangyf/project2/CyprinusCarpio/15.pop/0.vcfdata/final-raw.indel5.biSNP.QUAL30.QD3.FS20.MQ55.SOR3.MQRS-5.RPRS-5.PASS.GQ10.popmiss.maxmiss0.15.AF0.05.10-3ClusterFilter.vcf.gz > final.vcf.avinput
 
-/data01/wangyf/software/annovar/annotate_variation.pl -geneanno -dbtype refGene -outfile anno -buildver genome final.vcf.avinput ./genome --aamatrix /data01/wangyf/software/annovar/example/grantham.matrix
+/data01/wangyf/software/annovar/annotate_variation.pl -geneanno -dbtype refGene -outfile anno -buildver genome final.vcf.avinput ./genome # --aamatrix /data01/wangyf/software/annovar/example/grantham.matrix
 #-geneanno 通过基于基因的注释注释变体(推断基因的功能后果)
 #-dbtype 指定数据库类型
 #-outfile 指定输出文件前缀
@@ -23,4 +23,5 @@ cp genome* genome
 ##结果解读，生成2个文件
 在variant_function文件中，注释所有变异所在基因及位置。第1列为变异所在的类型，如外显子等，第2列是对应的基因名(若有多个基因名用“，”隔开)
 在exonic_variant_function文件中，详细注释外显子区域的变异功能、类型、氨基酸改变等。第1列为.variant_function文件中该变异所在行号，第2列为变异功能性后果，如外显子改变导致的氨基酸变化，阅读框移码，无义突变，终止突变等，第3列包括基因名称、转录识别标志和相应的转录本的序列变化
+
 
